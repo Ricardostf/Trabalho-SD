@@ -1,8 +1,8 @@
 <p align="center">
-    <img src="./images/OIG.jfif" alt="logo" width="300" height="300">
+    <img src="https://github.com/diegomarqueszs/trabalho_sistemas_distribuidos/assets/90580148/4adb4296-ac6d-4bac-b5c5-ce4acc7eacfe" alt="logo" width="300" height="300">
 </p>
 
-<h3 align="center">Spy Farm - Gerenciamento de Iot </h3>
+<h3 align="center">Gerenciamento de Iot </h3>
 
 <p align="center">
   GCC129 - Sistemas Distribuídos - Prof. André de Lima Salgado
