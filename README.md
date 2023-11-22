@@ -14,4 +14,4 @@
 - THIAGO HENRIQUE DOS REIS MAGALHÃES **202110174** *(thiago.magalhaes3@estudante.ufla.br)*
 
 ## Descrição do projeto:
-Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estudados na disciplina GCC129 - Sistemas Distribuídos. Foi desenvolvido uma aplicação para gerenciamento de plantas com a utilização de sensores, a ideia é unificar os dados coletados pelos sensores e disponibilizar para o usuário através de uma interface. A aplicação foi desenvolvida utilizando a linguagem de programação Python e java.
+Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estudados na disciplina GCC129 - Sistemas Distribuídos. Foi desenvolvido uma aplicação para gerenciamento de plantas com a utilização de sensores, a ideia é unificar os dados coletados pelos sensores e disponibilizar para o usuário através de uma interface. A aplicação foi desenvolvida utilizando a linguagem de programação Python.
