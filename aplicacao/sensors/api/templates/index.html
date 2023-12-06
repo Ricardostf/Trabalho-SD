@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha API Django</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 15px 50px;
+            display: flex;
+            align-items: center;
+            background: rgb(2,0,36);
+            background: linear-gradient(43deg, rgba(2,0,36,1) 7%, rgba(37,15,75,1) 32%, rgba(28,149,160,1) 97%);
+        }
+
+        .left-column {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .right-column img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            color: #38E6BD;
+            font-size: 70px;
+        }
+
+        h2{
+            margin-top: 20px;
+            color: #F1F5F4;
+        }
+        li{
+            color: #38E6BD;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6em;
+            color: #F1F5F4;
+            text-align: justify;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+        .img-colaborador{
+            height: 100px;
+            width: 100px;  
+        }
+        .colaboradores {
+            display: flex;
+        }
+
+        .colaborador {
+            margin: 20px;
+            display: flex; /* Transforma os filhos em um flex container */
+            flex-direction: column; /* Alinha os filhos em uma coluna */
+            align-items: center; /* Centraliza itens na coluna */
+            justify-content: center; /* Centraliza itens horizontalmente */
+        }
+        
+
+        .colaborador img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10%;
+        }
+
+        .colaborador p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 300px; /* Ajuste a largura conforme necessário */
+        }
+
+        .button {
+            flex: 1;
+            padding: 10px;
+            margin: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 45px;
+            background-color: #B32567;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-column">
+        <h1>API DJANGO - SPY FARM</h1>
+        
+        <p>
+            Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estudados na disciplina 
+            <b>GCC129 - Sistemas Distribuídos</b>. Foi desenvolvido uma aplicação para gerenciamento de plantas com a 
+            utilização de sensores, a ideia é unificar os dados coletados pelos sensores e disponibilizar para 
+            o usuário através de uma interface. A aplicação foi desenvolvida utilizando a linguagem
+             de programação Python.
+        </p>
+        
+        <ul>
+            <li>Create: Adicione novos sensores à sua aplicação.</li>
+            <li>Read: Obtenha informações sobre os sensores existentes.</li>
+            <li>Update: Atualize as configurações ou valores dos sensores.</li>
+            <li>Delete: Remova sensores da sua aplicação.</li>
+        
+        </ul>
+
+        <p>Para mais detalhes, consulte a documentação da API.</p>
+        <div class="button-container">
+            <button class="button" onclick="redirect('/admin')">Admin</button>
+            <button class="button" onclick="redirect('/sensors')">Sensores</button>
+            <button class="button" onclick="window.location.href = 'https://github.com/Ricardostf/Trabalho-SD'">GitHub</button>
+        </div>
+
+        <h2>Colaboradores: </h2>
+        <div class="colaboradores">
+            <div class="colaborador">
+                <img class="img-colaborador" src="https://media.licdn.com/dms/image/D4D03AQGW6V9GqwrmUQ/profile-displayphoto-shrink_800_800/0/1664478197404?e=1707350400&v=beta&t=80y6Rp9lq9R6D8Ra44Js9YjxArV1k0OC-KM5ZrvSjgc" alt="Descrição da Imagem">
+                <p>Diego Marques</p>
+            </div>
+            <div class="colaborador">
+                <img class="img-colaborador" src="https://media.licdn.com/dms/image/D5603AQGlbZ2UAWlovQ/profile-displayphoto-shrink_800_800/0/1700264928980?e=1707350400&v=beta&t=GleZe1gfQiMMxtzdBgicT99gx9idsciso_5PJQQZvCQ" alt="Descrição da Imagem">
+                <p>Ricardo Augusto</p>
+            </div>
+            <div class="colaborador">
+                <img class="img-colaborador" src="https://media.licdn.com/dms/image/C4E03AQFivsUt4618QA/profile-displayphoto-shrink_800_800/0/1648836370952?e=1707350400&v=beta&t=-7OouUzSWho73b9EWjBOsRukro7-_OZahOGNXPCe1Xc" alt="Descrição da Imagem">
+                <p>Thiago Henrique</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <img src="https://github.com/diegomarqueszs/trabalho_sistemas_distribuidos/assets/90580148/4adb4296-ac6d-4bac-b5c5-ce4acc7eacfe" alt="Descrição da Imagem">
+    </div>
+</body>
+
+    <script>
+        function redirect(path) {
+            // Concatena o caminho ao caminho base da URL
+            var newUrl = window.location.origin + path;
+            
+            // Redireciona o usuário para a nova URL
+            window.location.href = newUrl;
+        }
+    </script>
+</html>
