@@ -87,8 +87,8 @@ Também é necessário instalar o django rest framework, para isso basta utiliza
 
 ### 2.1 Tecnologias Usadas
 <img height="32" src="images/django.png" alt="Django" style="max-width: 100%;">
-<img height="32" src="images/python.png" alt="Django" style="max-width: 100%;">
-<img height="32" src="images/SQLite.png" alt="Django" style="max-width: 100%;">
+<img height="32" src="images/Python.png" alt="Python" style="max-width: 100%;">
+<img height="32" src="images/SQLite.png" alt="SQLite" style="max-width: 100%;">
 
 ### 2.2 Arquitetura de Sistema
 A arquitetura do sistema, de acordo com as páginas 23 e 24 do livro "Sistemas Distribuidos principios e paradigmas" (2ª Edição, Andrew S. Tanenbaum, Marteen Van Steen), consiste em uma arquitetura centralizada onde o cliente implementa o nível de interafce do usuário (interfaces que permitem aos usuários finais interagirem com aplicações), o nível de processamento contém as aplicações e o nível de dados gerencia os dados propriamente ditos.  
