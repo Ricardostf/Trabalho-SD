@@ -21,24 +21,25 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
 1. [Introdução](#1-introdução)
     1. [Cria uma máquina de desenvolvimento virtual](#11-cria-uma-máquina-de-desenvolvimento-virtual)
     2. [Instalações necessárias no ambiente virtual](#12-instalações-necessárias-no-ambiente-virtual)
-2. [Criando o projeto](#2-criando-o-projeto)
-3. [Aplicação migrations](#3-aplicação-migrations)
-4. [Introdução ao sistema de administração](#4-introdução-ao-sistema-de-administração)
-5. [Criando a aplicação](#5-criando-a-aplicação)
-6. [Registrando a aplicação](#6-registrando-a-aplicação)
-    1. [Adicioando url da aplicação](#61-adicioando-url-da-aplicação)
-    2. [Criando urls da aplicação](#62-criando-urls-da-aplicação)
-7. [Criando o model](#7-criando-o-model)
-8. [Adicionando o model no sistema de administração](#8-adicionando-o-model-no-sistema-de-administração)
-    1. [Exibindo o nome do model no sistema de administração](#81-exibindo-o-nome-do-model-no-sistema-de-administração)
-9. [Criando o serializer](#9-criando-o-serializer)
-10. [Criando as views](#10-criando-as-views)
-    1. [Criando CRUD](#101-criando-crud)
-        1. [Criando método GET, POST](#1011-criando-método-get-post)
-        2. [Criando método GET](#1012-criando-método-get)
-        3. [Criando método PUT](#1013-criando-método-put)
-        4. [Criando método DELETE](#1014-criando-método-delete)
-11. [Consumindo API](#11-consumindo-api)
+2. [Arquitetura](#2-arquitetura)
+3. [Criando o projeto](#3-criando-o-projeto)
+4. [Aplicação migrations](#4-aplicação-migrations)
+5. [Introdução ao sistema de administração](#5-introdução-ao-sistema-de-administração)
+6. [Criando a aplicação](#6-criando-a-aplicação)
+7. [Registrando a aplicação](#7-registrando-a-aplicação)
+    1. [Adicioando url da aplicação](#71-adicioando-url-da-aplicação)
+    2. [Criando urls da aplicação](#72-criando-urls-da-aplicação)
+8. [Criando o model](#8-criando-o-model)
+9. [Adicionando o model no sistema de administração](#9-adicionando-o-model-no-sistema-de-administração)
+    1. [Exibindo o nome do model no sistema de administração](#91-exibindo-o-nome-do-model-no-sistema-de-administração)
+10. [Criando o serializer](#10-criando-o-serializer)
+11. [Criando as views](#11-criando-as-views)
+    1. [Criando CRUD](#111-criando-crud)
+        1. [Criando método GET, POST](#1111-criando-método-get-post)
+        2. [Criando método GET](#1112-criando-método-get)
+        3. [Criando método PUT](#1113-criando-método-put)
+        4. [Criando método DELETE](#1114-criando-método-delete)
+12. [Consumindo API](#12-consumindo-api)
 
 ---
 
@@ -80,7 +81,7 @@ Também é necessário instalar o django rest framework, para isso basta utiliza
   pip install djangorestframework
 ```
 
-### 2. Criando o projeto
+### 3. Criando o projeto
 É possível ver todas as opções disponíveis do django utilizando o comando abaixo:
 
 ```sh
@@ -100,7 +101,7 @@ Utilizando o comando abaixo é possível criar um projeto django:
   python manage.py runserver
 ```
 
-### 3. Aplicação migrations
+### 4. Aplicação migrations
 Migration é um recurso do django que permite a criação de tabelas no banco de dados a partir de um modelo. Para iniciar a aplicação migrations basta utilizar o comando abaixo:
 
 ```sh
@@ -128,14 +129,14 @@ Migration é um recurso do django que permite a criação de tabelas no banco de
 >      Applying sessions.0001_initial... OK
 >```
 
-### 4. Introdução ao sistema de administração
+### 5. Introdução ao sistema de administração
 O django possui um sistema de administração que permite a criação de usuários e models, para acessar o sistemas basta colocar /admin no final da url, por exemplo:
 
 ```sh
   http://127.0.0.1:8000/admin
 ```
 Teremos um site parecido com o da imagem abaixo:
-![Alt text](image.png)
+![Alt text](images\image-4.png)
 
 Para criar um usuário basta utilizar o comando abaixo:
 
@@ -150,16 +151,16 @@ Criaremos um usuário com as seguintes informações:
 > Essas informações são apenas para fins de teste, não é recomendado utilizar essas informações em um ambiente de produção.
 
 Agora é possível acessar o sistema de administração utilizando as informações do usuário criado anteriormente. Teremos um site parecido com o da imagem abaixo:
-![Alt text](image-1.png)
+![Alt text](images\image-1.png)
 
-### 5. Criando a aplicação
+### 6. Criando a aplicação
 Para criar uma aplicação basta utilizar o comando abaixo:
 
 ```sh
   python manage.py startapp api
 ```
 
-### 6. Registrando a aplicação
+### 7. Registrando a aplicação
 Agora é preciso adicionar no arquivo settings.py a aplicação criada anteriormente, para isso basta adicionar o nome da aplicação no final da lista INSTALLED_APPS, por exemplo:
 
 ```sh
@@ -176,7 +177,7 @@ Agora é preciso adicionar no arquivo settings.py a aplicação criada anteriorm
   ]
 ```
 
-### 6.1 Adicioando url da aplicação 
+### 7.1 Adicioando url da aplicação 
 Agora é preciso adicionar no arquivo urls.py a url da aplicação criada anteriormente, para isso basta adicionar o nome da aplicação no final da lista urlpatterns, por exemplo:
 
 ```sh
@@ -186,7 +187,7 @@ Agora é preciso adicionar no arquivo urls.py a url da aplicação criada anteri
   ]
 ```
 
-### 6.2 Criando urls da aplicação
+### 7.2 Criando urls da aplicação
 Agora é preciso criar o arquivo urls.py dentro da aplicação criada anteriormente, para isso basta criar o arquivo urls.py dentro da pasta api, por exemplo:
 
 ```sh
@@ -213,7 +214,7 @@ urlpatterns = [
 ]
 ```
 
-### 7. Criando o model
+### 8. Criando o model
 Agora é preciso criar o model, para isso basta criar o arquivo models.py dentro da pasta api, por exemplo:
 
 ```sh
@@ -246,7 +247,7 @@ Agora é necessário criar as migrations para que o django crie a tabela no banc
   python manage.py migrate
 ```
 
-### 8. Adicionando o model no sistema de administração
+### 9. Adicionando o model no sistema de administração
 Agora é preciso adicionar o model no sistema de administração, para isso basta adicionar o seguinte código no arquivo admin.py:
 ```sh
   from django.contrib import admin
@@ -255,12 +256,12 @@ Agora é preciso adicionar o model no sistema de administração, para isso bast
   admin.site.register(Sensors)
 ```
 Pronto, agora é possível acessar o sistema de administração e ver o model criado, para isso basta acessar a url /admin e fazer o login com o usuário criado anteriormente. Teremos um site parecido com o da imagem abaixo:
-![Alt text](image-2.png)
+![Alt text](images\image-2.png)
 
 Podemos testar a criação de um novo registro clicando em "Add" no model Sensors, apos isso basta preencher os campos e clicar em "Save". Teremos um site parecido com o da imagem abaixo:
-![Alt text](image-4.png)
+![Alt text](images\image-4.png)
 
-### 8.1 Exibindo o nome do model no sistema de administração
+### 9.1 Exibindo o nome do model no sistema de administração
 
 Agora é possível exibir o nome do model no sistema de administração, para isso basta adicionar o seguinte código no arquivo models.py criado anteriormente, ficando assim:
 
@@ -276,9 +277,9 @@ Agora é possível exibir o nome do model no sistema de administração, para is
         return self.name
 ```
 Agora é possível ver o nome do model no sistema de administraçãocomo na imagem abaixo:
-![Alt text](image-5.png)
+![Alt text](images\image-5.png)
 
-### 9. Criando o serializer
+### 10. Criando o serializer
 Um serializer é uma classe que converte um model em um formato que pode ser facilmente convertido em JSON, para isso basta criar o arquivo serializers.py dentro da pasta api, por exemplo:
 
 ```sh
@@ -308,7 +309,7 @@ Agora é preciso criar o serializer, para isso basta adicionar o seguinte códig
 
 ```
 
-### 10. Criando as views
+### 11. Criando as views
 Views são responsáveis por receber as requisições e retornar as respostas, para isso basta criar o arquivo views.py dentro da pasta api, por exemplo:
 
 ```sh
@@ -386,7 +387,7 @@ Agora é preciso criar o método GET e PUT, para isso basta adicionar o seguinte
     
 ```
 >Talvez seja necessário mudar o interpretador do python para o interpretador do ambiente virtual, para isso basta apertar Ctrl+Shift+P e digitar "Python: Select Interpreter" e selecionar o interpretador do ambiente virtual. Adicione o python.exe do seguinte caminho: .venv\Scripts\python.exe
-![Alt text](image-7.png)
+![Alt text](images\image-7.png)
 
 Para testar o método POST, utilizaremos o software Postman, para isso basta acessar o site oficial e baixar a versão mais recente: (https://www.postman.com/downloads/ ). Agora é preciso criar uma requisição POST para a url http://127.0.0.1:8000/sensors/ e adicionar o seguinte código no body:
 ```sh
@@ -398,7 +399,7 @@ Para testar o método POST, utilizaremos o software Postman, para isso basta ace
 Para isso, basta clicar em "Body" e selecionar a opção "raw", depois basta selecionar a opção "JSON" e adicionar o código acima.
 
 Sua interface deve ficar parecida com a imagem abaixo:
-![Alt text](image-9.png)
+![Alt text](images\image-9.png)
 
 >Saída esperada:
 >```sh
@@ -476,7 +477,7 @@ Agora é possível acessar a url /api/sensors/2 e ver os dados retornados pela v
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](image-10.png)
+>![Alt text](images\image-10.png)
 
 ### 11.3 Criando método PUT
 Vamos criar agora o método PUT ao qual é o responsável por atualizar os dados, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
@@ -584,7 +585,7 @@ Saída esperada:
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](image-11.png)
+>![Alt text](images\image-11.png)
 
 ### 11.4 Criando método DELETE
 O método delete é o responsável por excluir um sensor, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
@@ -647,7 +648,7 @@ O método delete é o responsável por excluir um sensor, para isso basta adicio
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](image-12.png)
+>![Alt text](images\image-12.png)
 
 ### 12. Consumindo API
 Agora vamos criar um exemplo de como consumir a API, criaremos um arquivo chamado client.py na raiz do projeto, para isso basta criar o arquivo client.py na raiz do projeto, por exemplo:
