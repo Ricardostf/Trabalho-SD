@@ -60,7 +60,7 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
 Aqui estamos criando um ambiente virtual chamado .venv, para ativar o ambiente virtual basta utilizar o comando abaixo:
 
 ```sh
-  . .\.venv\Scripts\activate
+  source ./.venv/bin/activate
 ```
 
 >Casso necessário, para desativar o ambiente virtual basta utilizar o comando abaixo:
