@@ -1,9 +1,14 @@
+from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Sensors
 from .serializers import SensorsSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+
+
+def index(request):
+    return render(request, 'index.html')
 
 @api_view(['GET', 'POST'])
 def sensors_list(request, format=None):
