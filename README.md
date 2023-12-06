@@ -35,7 +35,7 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
 10. [Criando o serializer](#10-criando-o-serializer)
 11. [Criando as views](#11-criando-as-views)
     1. [Criando CRUD](#111-criando-crud)
-        1. [Criando método GET, POST](#1111-criando-método-get-post)
+        1. [Criando método GET, POST](#1111-criando-métodos-get-post)
         2. [Criando método GET](#1112-criando-método-get)
         3. [Criando método PUT](#1113-criando-método-put)
         4. [Criando método DELETE](#1114-criando-método-delete)
@@ -359,7 +359,7 @@ Agore é possível acessar a url /api/sensors e ver os dados retornados pela vie
 
 ### 11.1 Criando CRUD
 
-### 11.1.1 Criando método GET e PUT
+### 11.1.1 Criando métodos GET POST
 Agora é preciso criar o método GET e PUT, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
 
 ```sh
