@@ -136,7 +136,7 @@ O django possui um sistema de administração que permite a criação de usuári
   http://127.0.0.1:8000/admin
 ```
 Teremos um site parecido com o da imagem abaixo:
-![Alt text](images\image-4.png)
+![Alt text](image-4.png)
 
 Para criar um usuário basta utilizar o comando abaixo:
 
@@ -151,7 +151,7 @@ Criaremos um usuário com as seguintes informações:
 > Essas informações são apenas para fins de teste, não é recomendado utilizar essas informações em um ambiente de produção.
 
 Agora é possível acessar o sistema de administração utilizando as informações do usuário criado anteriormente. Teremos um site parecido com o da imagem abaixo:
-![Alt text](images\image-1.png)
+![Alt text](image-1.png)
 
 ### 6. Criando a aplicação
 Para criar uma aplicação basta utilizar o comando abaixo:
@@ -256,10 +256,10 @@ Agora é preciso adicionar o model no sistema de administração, para isso bast
   admin.site.register(Sensors)
 ```
 Pronto, agora é possível acessar o sistema de administração e ver o model criado, para isso basta acessar a url /admin e fazer o login com o usuário criado anteriormente. Teremos um site parecido com o da imagem abaixo:
-![Alt text](images\image-2.png)
+![Alt text](image-2.png)
 
 Podemos testar a criação de um novo registro clicando em "Add" no model Sensors, apos isso basta preencher os campos e clicar em "Save". Teremos um site parecido com o da imagem abaixo:
-![Alt text](images\image-4.png)
+![Alt text](image-4.png)
 
 ### 9.1 Exibindo o nome do model no sistema de administração
 
@@ -277,7 +277,7 @@ Agora é possível exibir o nome do model no sistema de administração, para is
         return self.name
 ```
 Agora é possível ver o nome do model no sistema de administraçãocomo na imagem abaixo:
-![Alt text](images\image-5.png)
+![Alt text](image-5.png)
 
 ### 10. Criando o serializer
 Um serializer é uma classe que converte um model em um formato que pode ser facilmente convertido em JSON, para isso basta criar o arquivo serializers.py dentro da pasta api, por exemplo:
@@ -388,7 +388,7 @@ Agora é preciso criar o método GET e PUT, para isso basta adicionar o seguinte
     
 ```
 >Talvez seja necessário mudar o interpretador do python para o interpretador do ambiente virtual, para isso basta apertar Ctrl+Shift+P e digitar "Python: Select Interpreter" e selecionar o interpretador do ambiente virtual. Adicione o python.exe do seguinte caminho: .venv\Scripts\python.exe
-![Alt text](images\image-7.png)
+![Alt text](image-7.png)
 
 Para testar o método POST, utilizaremos o software Postman, para isso basta acessar o site oficial e baixar a versão mais recente: (https://www.postman.com/downloads/ ). Agora é preciso criar uma requisição POST para a url http://127.0.0.1:8000/sensors/ e adicionar o seguinte código no body:
 ```sh
@@ -400,7 +400,7 @@ Para testar o método POST, utilizaremos o software Postman, para isso basta ace
 Para isso, basta clicar em "Body" e selecionar a opção "raw", depois basta selecionar a opção "JSON" e adicionar o código acima.
 
 Sua interface deve ficar parecida com a imagem abaixo:
-![Alt text](images\image-9.png)
+![Alt text](image-9.png)
 
 >Saída esperada:
 >```sh
@@ -478,7 +478,7 @@ Agora é possível acessar a url /api/sensors/2 e ver os dados retornados pela v
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](images\image-10.png)
+>![Alt text](image-10.png)
 
 ### 11.1.3 Criando método PUT
 Vamos criar agora o método PUT ao qual é o responsável por atualizar os dados, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
@@ -586,7 +586,7 @@ Saída esperada:
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](images\image-11.png)
+>![Alt text](image-11.png)
 
 ### 11.1.4 Criando método DELETE
 O método delete é o responsável por excluir um sensor, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
@@ -649,7 +649,7 @@ O método delete é o responsável por excluir um sensor, para isso basta adicio
   }
 ```
 >Sua interface deve ficar parecida com a imagem abaixo:
->![Alt text](images\image-12.png)
+>![Alt text](image-12.png)
 
 ### 12. Consumindo API
 Agora vamos criar um exemplo de como consumir a API, criaremos um arquivo chamado client.py na raiz do projeto, para isso basta criar o arquivo client.py na raiz do projeto, por exemplo:
