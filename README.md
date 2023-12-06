@@ -84,11 +84,12 @@ Também é necessário instalar o django rest framework, para isso basta utiliza
 ### 2. Arquitetura do Sistema
 A arquitetura do sistema, de acordo com as páginas 23 e 24 do livro "Sistemas Distribuidos principios e paradigmas" (2ª Edição, Andrew S. Tanenbaum, Marteen Van Steen), consiste em uma arquitetura centralizada onde o cliente implementa o nível de interafce do usuário (interfaces que permitem aos usuários finais interagirem com aplicações), o nível de processamento contém as aplicações e o nível de dados gerencia os dados propriamente ditos.
 
-Arquitetura Centralizada:
-  -- Cliente-Servidor;
-  -- 1. Cliente manda requisição à API; 
+<p style="white-space: pre-line;">
+  Arquitetura Centralizada (Cliente-Servidor):
+  -- 1. Cliente manda requisição à API;
   -- 2. API interpreta a requisição e a realiza no banco de dados;
   -- 3. Os resultados são retornados pelo protocolo HTTP.
+</p>
 
 ![Alt text](image-arq.png)
 
