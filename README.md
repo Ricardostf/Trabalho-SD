@@ -21,7 +21,7 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
 1. [Introdução](#1-introdução)
     1. [Cria uma máquina de desenvolvimento virtual](#11-cria-uma-máquina-de-desenvolvimento-virtual)
     2. [Instalações necessárias no ambiente virtual](#12-instalações-necessárias-no-ambiente-virtual)
-2. [Arquitetura](#2-arquitetura)
+2. [Arquitetura do Sistema](#2-arquitetura-do-sistema)
 3. [Criando o projeto](#3-criando-o-projeto)
 4. [Aplicação migrations](#4-aplicação-migrations)
 5. [Introdução ao sistema de administração](#5-introdução-ao-sistema-de-administração)
@@ -80,6 +80,18 @@ Também é necessário instalar o django rest framework, para isso basta utiliza
 ```sh
   pip install djangorestframework
 ```
+
+### 2. Arquitetura do Sistema
+A arquitetura do sistema, de acordo com as páginas 23 e 24 do livro "Sistemas Distribuidos principios e paradigmas" (2ª Edição, Andrew S. Tanenbaum, Marteen Van Steen), consiste em uma arquitetura centralizada onde o cliente implementa o nível de interafce do usuário (interfaces que permitem aos usuários finais interagirem com aplicações), o nível de processamento contém as aplicações e o nível de dados gerencia os dados propriamente ditos.
+
+Arquitetura Centralizada:
+  -- Cliente-Servidor;
+  -- 1. Cliente manda requisição à API; 
+  -- 2. API interpreta a requisição e a realiza no banco de dados;
+  -- 3. Os resultados são retornados pelo protocolo HTTP.
+
+![Alt text](image-arq.png)
+
 
 ### 3. Criando o projeto
 É possível ver todas as opções disponíveis do django utilizando o comando abaixo:
