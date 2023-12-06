@@ -357,8 +357,9 @@ Agore é possível acessar a url /api/sensors e ver os dados retornados pela vie
   [{"id": 2, "name": "Temperatura", "value": 25.5, "timestamp": "2023-12-02T22:07:27.573622Z"}]
 ```
 
-### 11. Criando CRUD
-11.1 Criando método GET, POST
+### 11.1 Criando CRUD
+
+### 11.1.1 Criando método GET e PUT
 Agora é preciso criar o método GET e PUT, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
 
 ```sh
@@ -411,7 +412,7 @@ Sua interface deve ficar parecida com a imagem abaixo:
 >  }
 >```
 
-### 11.2 Criando método GET
+### 11.1.2 Criando método GET
 Queremos obter o sensor pelo id, para isso precisamos adicionar o caminho do id na url, para isso basta adicionar o seguinte código no arquivo urls.py criado anteriormente, ficando assim:
 
 ```sh
@@ -479,7 +480,7 @@ Agora é possível acessar a url /api/sensors/2 e ver os dados retornados pela v
 >Sua interface deve ficar parecida com a imagem abaixo:
 >![Alt text](images\image-10.png)
 
-### 11.3 Criando método PUT
+### 11.1.3 Criando método PUT
 Vamos criar agora o método PUT ao qual é o responsável por atualizar os dados, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
 
 ```sh
@@ -587,7 +588,7 @@ Saída esperada:
 >Sua interface deve ficar parecida com a imagem abaixo:
 >![Alt text](images\image-11.png)
 
-### 11.4 Criando método DELETE
+### 11.1.4 Criando método DELETE
 O método delete é o responsável por excluir um sensor, para isso basta adicionar o seguinte código no arquivo views.py criado anteriormente, ficando assim:
 
 ```sh
