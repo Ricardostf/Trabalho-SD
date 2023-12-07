@@ -24,7 +24,7 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
 2. [Arquiteturas e Tecnologias usadas](#2-arquiteturas-e-tecnologias-usadas)
     1. [Tecnologias usadas](#21-tecnologias-usadas)
     2. [Arquitetura de Sistema](#22-arquitetura-de-sistema)
-    3. [Arquiterua de Software](#23-arquitetura-de-software)
+    3. [Arquitetura de Software](#23-arquitetura-de-software)
 3. [Criando o projeto](#3-criando-o-projeto)
 4. [Aplicação migrations](#4-aplicação-migrations)
 5. [Introdução ao sistema de administração](#5-introdução-ao-sistema-de-administração)
@@ -97,16 +97,16 @@ Arquitetura Centralizada (Cliente-Servidor):
 -- 2. API interpreta a requisição e a realiza no banco de dados;  
 -- 3. Os resultados são retornados pelo protocolo HTTP.  
 
-![Alt text](images/image-arqSistema.png)
+![Alt text](images/image-arqSistema.jpg)
 
 
 ### 2.3 Arquitetura de Software
 A arquitetura de software utilizada para o desenvolvimento do sistema consiste em uma arquitetura Model, View, Controller(MVC):  
--- View exibe os dados ao usuário, para que consiga interagir e visualizar as respostas;
--- Controller gerencia e solicita ao Model as requisições peidas pelo usuário;
--- Model atualiza o estado dos dados no banco.
+-- View exibe os dados ao usuário, para que consiga interagir e visualizar as respostas;  
+-- Controller gerencia e solicita ao Model as requisições peidas pelo usuário;  
+-- Model atualiza o estado dos dados no banco.  
 
-![Alt text](images/image-arqSoftware.png)
+![Alt text](images/image-arqSoftware.jpg)
 
 
 ### 3. Criando o projeto
