@@ -16,8 +16,13 @@
 ## Descrição do projeto:
 Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estudados na disciplina GCC129 - Sistemas Distribuídos. Foi desenvolvido uma aplicação para gerenciamento de plantas com a utilização de sensores, a ideia é unificar os dados coletados pelos sensores e disponibilizar para o usuário através de uma interface. A aplicação foi desenvolvida utilizando a linguagem de programação Python.
 
----
-## Roadpmap:
+### Direcionamento do projeto:
+Este projeto foi dividido em duas partes, tutorial e projeto completo. O tutorial tem como objetivo apresentar os conceitos básicos do framework Django, já o projeto completo tem como objetivo apresentar uma aplicação completa desenvolvida com o framework Django.
+## Tutorial
+Foi desenvolvido um tutorial para apresentar os conceitos básicos do framework Django, para acessar o tutorial basta clicar no link abaixo:
+- [Minha primeira API em DJANGO](FIRSTAPPLICATION.md)
+
+## Roadpmap Projeto Completo:
 1. [Introdução](#1-introdução)
     1. [Cria uma máquina de desenvolvimento virtual](#11-cria-uma-máquina-de-desenvolvimento-virtual)
     2. [Instalações necessárias no ambiente virtual](#12-instalações-necessárias-no-ambiente-virtual)
