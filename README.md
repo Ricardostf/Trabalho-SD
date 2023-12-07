@@ -22,8 +22,9 @@ Este trabalho prático tem como objetivo aplicar os conceitos e tecnologias estu
     1. [Cria uma máquina de desenvolvimento virtual](#11-cria-uma-máquina-de-desenvolvimento-virtual)
     2. [Instalações necessárias no ambiente virtual](#12-instalações-necessárias-no-ambiente-virtual)
 2. [Arquiteturas e Tecnologias usadas](#2-arquiteturas-e-tecnologias-usadas)
-    1. [Tecnologias usadas](#22-tecnologias-usadas)
-    2. [Arquitetura de Sistema](#21-arquitetura-de-sistema)
+    1. [Tecnologias usadas](#21-tecnologias-usadas)
+    2. [Arquitetura de Sistema](#22-arquitetura-de-sistema)
+    3. [Arquitetura de Software](#23-arquitetura-de-software)
 3. [Criando o projeto](#3-criando-o-projeto)
 4. [Aplicação migrations](#4-aplicação-migrations)
 5. [Introdução ao sistema de administração](#5-introdução-ao-sistema-de-administração)
@@ -89,14 +90,23 @@ Também é necessário instalar o django rest framework, para isso basta utiliza
 <img height="32" src="images/django.png" alt="Django" style="max-width: 100%;"> <img height="32" src="images/Python.png" alt="Python" style="max-width: 100%;"> <img height="32" src="images/SQLite.png" alt="SQLite" style="max-width: 100%;">
 
 ### 2.2 Arquitetura de Sistema
-A arquitetura do sistema, de acordo com as páginas 23 e 24 do livro "Sistemas Distribuidos principios e paradigmas" (2ª Edição, Andrew S. Tanenbaum, Marteen Van Steen), consiste em uma arquitetura centralizada onde o cliente implementa o nível de interafce do usuário (interfaces que permitem aos usuários finais interagirem com aplicações), o nível de processamento contém as aplicações e o nível de dados gerencia os dados propriamente ditos.  
+A arquitetura do sistema, de acordo com as páginas 23 e 24 do livro "Sistemas Distribuidos principios e paradigmas" (2ª Edição, Andrew S. Tanenbaum, Marteen Van Steen), consiste em uma arquitetura centralizada onde o cliente implementa o nível de interface do usuário (interfaces que permitem aos usuários finais interagirem com aplicações), o nível de processamento contém as aplicações e o nível de dados gerencia os dados propriamente ditos.  
 
 Arquitetura Centralizada (Cliente-Servidor):  
 -- 1. Cliente manda requisição à API;  
 -- 2. API interpreta a requisição e a realiza no banco de dados;  
 -- 3. Os resultados são retornados pelo protocolo HTTP.  
 
-![Alt text](images/image-arq.png)
+![Alt text](images/image-arqSistema.jpg)
+
+
+### 2.3 Arquitetura de Software
+A arquitetura de software utilizada para o desenvolvimento do sistema consiste em uma arquitetura Model, View, Controller(MVC):  
+-- View exibe os dados ao usuário, para que consiga interagir e visualizar as respostas;  
+-- Controller gerencia e solicita ao Model as requisições peidas pelo usuário;  
+-- Model atualiza o estado dos dados no banco.  
+
+![Alt text](images/image-arqSoftware.jpg)
 
 
 ### 3. Criando o projeto
