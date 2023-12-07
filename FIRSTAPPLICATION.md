@@ -128,7 +128,24 @@ python3 manage.py makemigrations sensors
 python3 manage.py migrate sensors
 ```
 
-Precisamos também registrar o modelo no arquivo admin.py. Para isso, adicione o seguinte código:
+Precisamos também registrar o modelo em um arquivo admin.py. 
+Para isso, crie o seguinte arquivo na pasta sensors:
+```bash
+sensores
+├── admin.py # Crie este arquivo
+├── asgi.py
+├── __init__.py
+├── models.py
+├── __pycache__
+│   ├── __init__.cpython-310.pyc
+│   ├── settings.cpython-310.pyc
+│   ├── urls.cpython-310.pyc
+│   └── wsgi.cpython-310.pyc
+├── settings.py
+├── urls.py
+└── wsgi.py
+```
+Em seguida, adicione o seguinte código dentro desse arquivo criado:
 
 ```python
 from django.contrib import admin
@@ -148,6 +165,7 @@ Agora vamos criar a API que será utilizada para acessar os dados dos sensores. 
 
 ```bash
 sensores
+├── admin.py
 ├── asgi.py
 ├── __init__.py
 ├── models.py
@@ -180,6 +198,7 @@ Agora vamos criar as views que serão utilizadas para acessar os dados dos senso
 
 ```bash
 sensores
+├── admin.py
 ├── asgi.py
 ├── __init__.py
 ├── models.py
