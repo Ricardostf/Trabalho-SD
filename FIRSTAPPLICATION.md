@@ -13,6 +13,24 @@ Este documento tem como objetivo apresentar a primeira aplicação desenvolvida 
 
 
 ## Instalação
+Primeiramente, crie uma pasta para ser o diretório do projeto.  
+Em seguida, abra o terminal nesse diretório e execute os comandos que serão listados abaixo:
+
+```bash
+python3 -m venv .venv
+```
+
+Esse módulo venv oferece suporte à criação de “ambientes virtuais” leves, cada um com seu próprio conjunto independente de pacotes Python instalados em seus diretórios. Para verificar se foi instalado, realize o comando:
+
+```bash
+ls -a
+```
+
+Agora, precisamos ativar o .venv. Para isso, execute o seguinte comando:
+```bash
+. .venv/bin/activate
+```
+
 Utilizaremos o gerenciador de pacotes pip para instalar o Django e o Django REST Framework. Para instalar o pip, execute os seguintes comandos:
 
 ```bash
@@ -144,6 +162,18 @@ sensores
 └── wsgi.py
 ```
 >Um serializador é uma classe que define como um modelo e instâncias de modelo são convertidos em JSON. - [Django REST Framework](https://www.django-rest-framework.org/api-guide/serializers/)
+
+Com o arquivo criado, vamos adicionar o seguinte código:
+```python
+from rest_framework import serializers
+from .models import Sensors
+
+class SensorsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sensors
+        fields = ['id', 'name', 'value', 'timestamp']
+```
+        
 
 ## Criando as views
 Agora vamos criar as views que serão utilizadas para acessar os dados dos sensores. Para isso, criamos um arquivo chamado views.py dentro do diretório sensors.
