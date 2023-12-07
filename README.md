@@ -238,7 +238,6 @@ Agora é preciso criar o arquivo urls.py dentro da aplicação criada anteriorme
 
 ```
 Vamos deixar para definir as urls da aplicação mais tarde, por enquanto vamos deixar o arquivo urls.py com o seguinte conteúdo:
-```sh
 
 ```sh
 from django.urls import path, include
@@ -271,7 +270,7 @@ Vamos criar o model definindo os campos que serão utilizados, sendo eles: *name
   class Sensors(models.Model):
       name = models.CharField(max_length=255)
       value = models.FloatField()
-      timestamp = models.DacteTimeField(auto_now_add=True)
+      timestamp = models.DateTimeField(auto_now_add=True)
 ```
 Agora é necessário criar as migrations para que o django crie a tabela no banco de dados, para isso basta utilizar os comandos abaixo:
 
